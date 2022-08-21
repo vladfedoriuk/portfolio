@@ -6,6 +6,8 @@ module.exports = {
 			rootDir: 'apps/front/',
 		},
 	},
+	root: true,
+	ignorePatterns: ['node_modules/*', '.next'],
 	rules: {
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/no-explicit-any': 'error',
