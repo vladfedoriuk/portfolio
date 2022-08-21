@@ -4,8 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"front:dev": "pnpm --filter front dev",
-		"prepare": "husky install"
+		"front:dev": "pnpm --filter front dev"
 	},
 	"workspaces": [
 		"apps/*",
