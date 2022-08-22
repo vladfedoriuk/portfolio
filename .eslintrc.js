@@ -1,9 +1,5 @@
 module.exports = {
-	extends: [
-		'next/core-web-vitals',
-		'plugin:@typescript-eslint/recommended',
-		'prettier',
-	],
+	extends: ['next', 'plugin:@typescript-eslint/recommended', 'prettier'],
 	plugins: ['@typescript-eslint'],
 	settings: {
 		next: {
@@ -13,9 +9,9 @@ module.exports = {
 	root: true,
 	ignorePatterns: [
 		'node_modules/*',
-		'.next',
 		'build/',
 		'dist/',
+		'.next/',
 		'.cache/',
 		'.tmp/',
 	],
