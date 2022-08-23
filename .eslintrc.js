@@ -7,14 +7,6 @@ module.exports = {
 		},
 	},
 	root: true,
-	ignorePatterns: [
-		'node_modules/*',
-		'build/',
-		'dist/',
-		'.next/',
-		'.cache/',
-		'.tmp/',
-	],
 	rules: {
 		'@typescript-eslint/no-unused-vars': 'error',
 		'@typescript-eslint/no-explicit-any': 'error',

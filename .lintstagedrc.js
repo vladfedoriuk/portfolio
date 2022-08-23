@@ -1,6 +1,7 @@
 module.exports = {
 	// Type check TypeScript files
-	'apps/front/*.(ts|tsx)': () => 'yarn tsc --noEmit',
+	'apps/front/*.(ts|tsx)': () =>
+		'yarn tsc --noEmit --project apps/front/tsconfig.json',
 	'apps/cms/*.(ts|tsx)': () =>
 		'yarn tsc --noEmit --project apps/cms/tsconfig.json',
 
