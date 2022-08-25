@@ -1,5 +1,15 @@
 {
 	"extends": "../../tsconfig.json",
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
-	"exclude": ["node_modules"]
+	"compilerOptions": {
+		"baseUrl": ".", // This must be specified if "paths" is.
+		"paths": {
+			// These mapping is relative to "baseUrl"
+			"@components/*": ["components/*"],
+			"@hooks/*": ["hooks/*"],
+			"@theme/*": ["theme/*"],
+			"@utils/*": ["utils/*"]
+		}
+	},
+	"include": ["next-env.d.ts", "**/*.d.ts", "**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules", ".next"]
 }
