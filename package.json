@@ -1,27 +1,27 @@
 {
-	"name": "portfolio",
-	"private": true,
-	"version": "1.0.0",
-	"main": "index.js",
-	"repository": "git@github.com:vladfedoriuk/portfolio.git",
-	"author": "vladfedoriuk <vlad.fedoriuk2000@gmail.com>",
-	"license": "MIT",
-	"workspaces": [
-		"apps/*",
-		"packages/*"
-	],
-	"scripts": {
-		"front:dev": "yarn  workspace front dev",
-		"prepare": "husky install"
-	},
-	"devDependencies": {
-		"@typescript-eslint/eslint-plugin": "^5.33.1",
-		"eslint": "^8.22.0",
-		"eslint-config-next": "^12.2.5",
-		"eslint-config-prettier": "^8.5.0",
-		"husky": "^8.0.1",
-		"lint-staged": "^13.0.3",
-		"prettier": "^2.7.1",
-		"typescript": "^4.7.4"
-	}
+  "name": "portfolio",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:vladfedoriuk/portfolio.git",
+  "author": "vladfedoriuk <vlad.fedoriuk2000@gmail.com>",
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "front:dev": "yarn  workspace front dev",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.33.1",
+    "eslint": "^8.22.0",
+    "eslint-config-next": "^12.2.5",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
+  }
 }
