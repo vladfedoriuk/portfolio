@@ -1,12 +1,12 @@
-import * as React from "react";
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import { EmotionCache } from "@emotion/cache";
 import createEmotionServer from "@emotion/server/create-instance";
 import { theme } from "@theme/index";
 import createEmotionCache from "@utils/cache/createEmotionCache";
-import { NextComponentType } from "next/types";
 import { AppInitialProps } from "next/app";
 import { AppContextType, AppPropsType } from "next/dist/shared/lib/utils";
-import { EmotionCache } from "@emotion/cache";
+import Document, { Head, Html, Main, NextScript } from "next/document";
+import { NextComponentType } from "next/types";
+import * as React from "react";
 
 export default class MyDocument extends Document<{
   emotionStyleTags: JSX.Element[];

@@ -1,11 +1,12 @@
 import "../styles/globals.css";
-import { ThemeProvider } from "@mui/material/styles";
-import { theme } from "theme";
-import CssBaseline from "@mui/material/CssBaseline";
+
 import AppBar from "@components/AppBar";
-import createEmotionCache from "@utils/cache/createEmotionCache";
 import { CacheProvider } from "@emotion/react";
+import CssBaseline from "@mui/material/CssBaseline";
+import { ThemeProvider } from "@mui/material/styles";
+import createEmotionCache from "@utils/cache/createEmotionCache";
 import Head from "next/head";
+import { theme } from "theme";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
 
