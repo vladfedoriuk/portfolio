@@ -1,9 +1,9 @@
+import Link from "@components/Link";
 import { useAppBar } from "@hooks/appBar";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";
 import { default as MUIAppBar } from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
 import Container from "@mui/material/Container";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
@@ -18,7 +18,12 @@ const AppBar = () => {
   const { anchorElNav, handleOpenNavMenu, handleCloseNavMenu } = useAppBar();
 
   return (
-    <MUIAppBar position="static">
+    <MUIAppBar
+      position="static"
+      color="transparent"
+      elevation={0}
+      sx={{ borderBottom: (theme) => `1px solid ${theme.palette.divider}` }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
@@ -107,13 +112,14 @@ const AppBar = () => {
             }}
           >
             {pages.map((page) => (
-              <Button
+              <Link
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{ my: 2 }}
+                href="/"
               >
                 {page}
-              </Button>
+              </Link>
             ))}
           </Box>
         </Toolbar>
