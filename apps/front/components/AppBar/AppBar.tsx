@@ -1,4 +1,4 @@
-import Link from "@components/Link";
+import Link from "@components/Link/navigation";
 import { useAppBar } from "@hooks/appBar";
 import AdbIcon from "@mui/icons-material/Adb";
 import MenuIcon from "@mui/icons-material/Menu";

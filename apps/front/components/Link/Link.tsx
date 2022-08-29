@@ -1,5 +1,5 @@
 import MuiLink, { LinkProps as MuiLinkProps } from "@mui/material/Link";
-import { styled, Theme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 import clsx from "clsx";
 import NextLink, { LinkProps as NextLinkProps } from "next/link";
 import { useRouter } from "next/router";
@@ -7,36 +7,8 @@ import * as React from "react";
 
 // Add support for the sx prop for consistency with the other branches.
 // https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
-const linkStyleMixin = <T extends { theme: Theme }>({ theme }: T) => `
-  position: relative;
-  color: ${theme.palette.text.primary};
-  text-decoration: none;
-  &:hover {
-    color: ${theme.palette.text.primary};
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: ${theme.palette.primary.light};
-    transform: scaleX(0);
-    transition: transform 0.3s ease;
-  }
-  &:hover::before {
-    transform: scaleX(1);
-  }
-`;
-const Anchor = styled("a")`
-  ${linkStyleMixin}
-`;
 
-export const StyledMuiLink = styled(MuiLink)`
-  ${linkStyleMixin}
-`;
+const Anchor = styled("a")({});
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
@@ -126,7 +98,7 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     }
 
     return (
-      <StyledMuiLink
+      <MuiLink
         className={className}
         href={href}
         ref={ref}
