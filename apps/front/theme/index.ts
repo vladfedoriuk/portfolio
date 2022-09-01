@@ -1,6 +1,12 @@
 import { createTheme } from "@mui/material/styles";
 
-export const theme = createTheme({
+declare module "@mui/material/Typography" {
+  interface TypographyPropsVariantOverrides {
+    navigation: true;
+  }
+}
+
+const baseTheme = createTheme({
   palette: {
     primary: {
       main: "#083d77",
@@ -19,6 +25,23 @@ export const theme = createTheme({
     },
     success: {
       main: "#849324",
+    },
+  },
+});
+
+export const theme = createTheme(baseTheme, {
+  components: {
+    MuiTypography: {
+      variants: [
+        {
+          props: { variant: "navigation" },
+          style: {
+            ...baseTheme.typography.button,
+            my: 1,
+            letterSpacing: ".1rem",
+          },
+        },
+      ],
     },
   },
 });

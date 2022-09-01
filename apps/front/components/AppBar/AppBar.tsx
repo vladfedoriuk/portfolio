@@ -12,7 +12,7 @@ import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import * as React from "react";
 
-const pages = ["home"];
+const pages = ["blog"];
 
 const AppBar = () => {
   const { anchorElNav, handleOpenNavMenu, handleCloseNavMenu } = useAppBar();
@@ -114,9 +114,9 @@ const AppBar = () => {
             {pages.map((page) => (
               <Link
                 key={page}
+                variant="navigation"
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2 }}
-                href="/"
+                href="/blog"
               >
                 {page}
               </Link>
