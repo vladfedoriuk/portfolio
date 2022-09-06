@@ -1,4 +1,4 @@
-import { createTheme } from "@mui/material/styles";
+import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
@@ -29,19 +29,21 @@ const baseTheme = createTheme({
   },
 });
 
-export const theme = createTheme(baseTheme, {
-  components: {
-    MuiTypography: {
-      variants: [
-        {
-          props: { variant: "navigation" },
-          style: {
-            ...baseTheme.typography.button,
-            my: 1,
-            letterSpacing: ".1rem",
+export const theme = responsiveFontSizes(
+  createTheme(baseTheme, {
+    components: {
+      MuiTypography: {
+        variants: [
+          {
+            props: { variant: "navigation" },
+            style: {
+              ...baseTheme.typography.button,
+              my: 1,
+              letterSpacing: ".1rem",
+            },
           },
-        },
-      ],
+        ],
+      },
     },
-  },
-});
+  })
+);
