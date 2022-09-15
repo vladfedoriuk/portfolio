@@ -38,7 +38,6 @@ export const theme = responsiveFontSizes(
             props: { variant: "navigation" },
             style: {
               ...baseTheme.typography.button,
-              my: 1,
               letterSpacing: ".1rem",
             },
           },
