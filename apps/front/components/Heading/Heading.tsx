@@ -1,16 +1,17 @@
 import Typography from "@mui/material/Typography";
 import { useTheme } from "@mui/system";
-import Container from "@mui/system/Container";
+import Container, { ContainerProps } from "@mui/system/Container";
 
 import { LinearGradientTypography } from "./styled";
 
-const Heading: React.FC = () => {
+const Heading: React.FC<ContainerProps> = (props) => {
   const theme = useTheme();
   return (
     <Container
+      {...props}
       disableGutters
       maxWidth="sm"
-      sx={{ justifyContent: "flex-start", ml: 0 }}
+      sx={{ justifyContent: "flex-start", ml: 0, ...(props.sx ?? {}) }}
     >
       <LinearGradientTypography
         component="h1"
