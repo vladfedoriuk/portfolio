@@ -1,0 +1,1 @@
+export { BackgroundImageBox } from "./styled";
