@@ -2,7 +2,7 @@ module.exports = {
   extends: ["next", "plugin:@typescript-eslint/recommended", "prettier"],
   plugins: ["@typescript-eslint", "simple-import-sort", "import"],
   parserOptions: {
-    ecmaVersion: 2020,
+    ecmaVersion: "latest",
     sourceType: "module",
     ecmaFeatures: {
       jsx: true,
@@ -12,7 +12,7 @@ module.exports = {
   env: {
     browser: true,
     node: true,
-    es6: true,
+    es2021: true,
   },
   settings: {
     next: {

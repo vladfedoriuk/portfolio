@@ -1,3 +1,5 @@
+import Link from "@components/Link";
+import IconButton from "@mui/material/IconButton";
 import Stack from "@mui/material/Stack";
 
 import { ContactLink } from "./styled";
@@ -10,8 +12,17 @@ export interface ContactProps {
 export const Contact: React.FC<ContactProps> = ({ icon, text, link }) => {
   return (
     <Stack direction="row" spacing={1}>
-      {icon}
-      <ContactLink href={link}>{text}</ContactLink>
+      <Link href={link}>
+        <IconButton aria-label={text} sx={{ color: "text.primary" }}>
+          {icon}
+        </IconButton>
+      </Link>
+      <ContactLink
+        sx={{ display: { md: "flex", xs: "none" }, alignSelf: "center" }}
+        href={link}
+      >
+        {text}
+      </ContactLink>
     </Stack>
   );
 };
