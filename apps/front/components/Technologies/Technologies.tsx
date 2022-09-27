@@ -13,7 +13,7 @@ import VueSvg from "public/vue.svg";
 
 const Technologies = () => {
   return (
-    <Container maxWidth="lg" sx={{ mt: 6 }}>
+    <Container maxWidth="lg" component="section">
       <SectionHeader text="Tech Stack" />
       <Box
         sx={{
