@@ -1,5 +1,3 @@
-import "../styles/globals.css";
-
 import AppBar from "@components/AppBar";
 import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";

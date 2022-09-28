@@ -7,9 +7,10 @@ export const BackgroundImageBox = styled(Box, {
   },
 })<{ imagePath: string }>(({ imagePath }) => ({
   backgroundImage: `url(${imagePath})`,
-  backgroundRepeat: "no-repeat",
-  backgroundPosition: "center",
-  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat" /* Do not repeat the image */,
+  backgroundPosition: "center" /* Center the image */,
+  backgroundSize:
+    "cover" /* Resize the background image to cover the entire container */,
   width: "100%",
   aspectRatio: "16 / 9",
 }));

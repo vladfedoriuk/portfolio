@@ -12,22 +12,25 @@ const Home: NextPage = () => {
     <BackgroundImageBox imagePath="/wave-right.svg">
       <BackgroundImageBox imagePath="/wave-left.svg">
         <Container maxWidth="xl" component="main">
-          <Card
-            elevation={1}
-            sx={{
-              maxWidth: "sm",
-              minWidth: "xs",
-              p: 3,
-              borderRadius: "90px 10px 180px 5px",
-            }}
-          >
-            <Box sx={{ header: { justifyContent: "flex-start", ml: 0 } }}>
-              <Heading />
-            </Box>
-            <Box sx={{ section: { mt: 1.5 } }}>
-              <Contacts />
-            </Box>
-          </Card>
+          <Container maxWidth="xl" disableGutters sx={{ pt: 4 }}>
+            <Card
+              elevation={1}
+              sx={{
+                minWidth: "xs",
+                maxWidth: "sm",
+                p: 3,
+                borderRadius: "90px 10px 180px 5px",
+              }}
+            >
+              <Box sx={{ section: { justifyContent: "flex-start", ml: 0 } }}>
+                <Heading />
+              </Box>
+              <Box sx={{ section: { mt: 1.5 } }}>
+                <Contacts />
+              </Box>
+            </Card>
+          </Container>
+
           <Box sx={{ section: { mt: 6 } }}>
             <Technologies />
           </Box>

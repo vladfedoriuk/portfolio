@@ -7,7 +7,7 @@ import { LinearGradientTypography } from "./styled";
 const Heading = () => {
   const theme = useTheme();
   return (
-    <Container disableGutters maxWidth="sm" component="header">
+    <Container disableGutters maxWidth="sm" component="section">
       <LinearGradientTypography
         component="h1"
         variant="h2"
