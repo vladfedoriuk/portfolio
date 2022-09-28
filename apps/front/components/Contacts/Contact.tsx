@@ -11,7 +11,7 @@ export interface ContactProps {
 }
 export const Contact: React.FC<ContactProps> = ({ icon, text, link }) => {
   return (
-    <Stack direction="row" spacing={1}>
+    <Stack direction="row" spacing={0.5}>
       <Link href={link}>
         <IconButton aria-label={text} sx={{ color: "text.primary" }}>
           {icon}

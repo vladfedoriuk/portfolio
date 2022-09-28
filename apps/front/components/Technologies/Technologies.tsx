@@ -17,15 +17,20 @@ const container = {
   show: {
     opacity: 1,
     transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.5,
+      staggerChildren: 0.2,
     },
   },
 };
 
 const item = {
-  hidden: { opacity: 0 },
-  show: { opacity: 1 },
+  hidden: { opacity: 0, x: -50 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      duration: 0.8,
+    },
+  },
 };
 
 const Technologies = () => {
