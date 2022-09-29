@@ -28,6 +28,7 @@ const item = {
     opacity: 1,
     x: 0,
     transition: {
+      x: { type: "spring" },
       duration: 0.8,
     },
   },
