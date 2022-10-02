@@ -29,6 +29,7 @@ const item = {
     x: 0,
     transition: {
       x: { type: "spring" },
+      y: { type: "spring", stiffness: 400, damping: 10 },
       duration: 0.8,
     },
   },
@@ -56,28 +57,28 @@ const Technologies = () => {
           },
         }}
       >
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={PythonSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={TypescriptSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={DjangoSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={FastAPISvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={ReactSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={VueSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={NextJsSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={NuxtSvg} inheritViewBox />
         </Box>
       </Box>

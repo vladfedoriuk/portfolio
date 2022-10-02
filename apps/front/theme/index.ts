@@ -2,7 +2,7 @@ import { createTheme, responsiveFontSizes } from "@mui/material/styles";
 
 declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides {
-    navigation: true;
+    "button-spaced": true;
   }
 }
 
@@ -35,7 +35,7 @@ export const theme = responsiveFontSizes(
       MuiTypography: {
         variants: [
           {
-            props: { variant: "navigation" },
+            props: { variant: "button-spaced" },
             style: {
               ...baseTheme.typography.button,
               letterSpacing: ".1rem",

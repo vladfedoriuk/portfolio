@@ -4,7 +4,7 @@ import Stack from "@mui/material/Stack";
 
 import { Contact } from "./Contact";
 
-const Contacts = () => {
+const Contacts = ({ variant = "short" }: { variant?: "short" | "full" }) => {
   const contacts = [
     {
       slug: "github",
@@ -20,10 +20,24 @@ const Contacts = () => {
     },
   ];
 
+  const directionsFromVariant = {
+    short: "row",
+    full: "column",
+  } as const;
+
+  const spacingFromVariant = {
+    short: 0.25,
+    full: 2,
+  } as const;
+
   return (
-    <Stack spacing={2} direction="row" component="section">
+    <Stack
+      spacing={spacingFromVariant[variant]}
+      direction={directionsFromVariant[variant]}
+      component="section"
+    >
       {contacts.map(({ slug, ...rest }) => (
-        <Contact key={slug} {...rest} />
+        <Contact key={slug} variant={variant} {...rest} />
       ))}
     </Stack>
   );

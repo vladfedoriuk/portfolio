@@ -11,7 +11,8 @@
     "packages/*"
   ],
   "scripts": {
-    "front:dev": "yarn  workspace front dev",
+    "front:dev": "yarn workspace front dev",
+    "front:storybook": "yarn workspace front storybook",
     "prepare": "husky install"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
-    "typescript": "^4.7.4"
+    "typescript": "^4.7.4",
+    "webpack": "^5.74.0"
   }
 }

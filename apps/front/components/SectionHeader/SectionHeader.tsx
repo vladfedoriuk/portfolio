@@ -6,7 +6,11 @@ const SectionHeader = ({ text }: { text: string }) => {
       variant="h6"
       component="h3"
       align="center"
-      sx={{ textTransform: "uppercase", lineHeight: 1 }}
+      sx={{
+        textTransform: "uppercase",
+        lineHeight: 1,
+        letterSpacing: ".075rem",
+      }}
     >
       {text}
       <hr

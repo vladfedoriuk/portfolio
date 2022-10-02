@@ -1,6 +1,7 @@
 import { BackgroundImageBox } from "@components/BackgroundImage/styled";
 import Contacts from "@components/Contacts";
 import Heading from "@components/Heading";
+import Projects from "@components/Projects";
 import Technologies from "@components/Technologies";
 import Card from "@mui/material/Card";
 import Box from "@mui/system/Box";
@@ -26,13 +27,15 @@ const Home: NextPage = () => {
                 <Heading />
               </Box>
               <Box sx={{ section: { mt: 1.5 } }}>
-                <Contacts />
+                <Contacts variant="short" />
               </Box>
             </Card>
           </Container>
-
           <Box sx={{ section: { mt: 6 } }}>
             <Technologies />
+          </Box>
+          <Box sx={{ section: { mt: 6 } }}>
+            <Projects />
           </Box>
         </Container>
       </BackgroundImageBox>

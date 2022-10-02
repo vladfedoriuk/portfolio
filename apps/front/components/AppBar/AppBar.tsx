@@ -30,7 +30,7 @@ const AppBar = () => {
             }}
           >
             {pages.map((page) => (
-              <Link key={page} variant="navigation" href="/blog">
+              <Link key={page} variant="button-spaced" href="/blog">
                 {page}
               </Link>
             ))}
