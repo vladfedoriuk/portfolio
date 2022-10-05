@@ -1,5 +1,6 @@
 // https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
 // https://storybook.js.org/addons/storybook-addon-next
+// https://www.npmjs.com/package/storybook-addon-material-ui5
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",

@@ -35,6 +35,7 @@ const Contacts = ({ variant = "short" }: { variant?: "short" | "full" }) => {
       spacing={spacingFromVariant[variant]}
       direction={directionsFromVariant[variant]}
       component="section"
+      maxWidth="sm"
     >
       {contacts.map(({ slug, ...rest }) => (
         <Contact key={slug} variant={variant} {...rest} />
