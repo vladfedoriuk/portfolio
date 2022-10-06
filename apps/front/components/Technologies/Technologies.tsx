@@ -1,4 +1,4 @@
-import SectionHeader from "@components/SectionHeader";
+import Section from "@components/Section";
 import SvgIcon from "@mui/material/SvgIcon";
 import Box from "@mui/system/Box";
 import Container from "@mui/system/Container";
@@ -43,20 +43,13 @@ const Technologies = () => {
       variants={container}
       initial="hidden"
       animate="show"
+      sx={{
+        ".MuiSvgIcon-root": {
+          m: 2,
+        },
+      }}
     >
-      <SectionHeader text="Tech Stack" />
-      <Box
-        sx={{
-          mt: 4,
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-          flexWrap: "wrap",
-          ".MuiSvgIcon-root": {
-            m: 2,
-          },
-        }}
-      >
+      <Section title="Tech Stack">
         <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={PythonSvg} inheritViewBox />
         </Box>
@@ -81,7 +74,7 @@ const Technologies = () => {
         <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
           <SvgIcon fontSize="large" component={NuxtSvg} inheritViewBox />
         </Box>
-      </Box>
+      </Section>
     </Container>
   );
 };
