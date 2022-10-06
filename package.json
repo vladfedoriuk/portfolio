@@ -13,6 +13,8 @@
   "scripts": {
     "front:dev": "yarn workspace front dev",
     "front:storybook": "yarn workspace front storybook",
+    "front:build": "yarn workspace front build",
+    "front:export": "yarn workspace front next export",
     "prepare": "husky install"
   },
   "devDependencies": {
