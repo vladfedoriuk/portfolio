@@ -31,10 +31,7 @@ export const Contact: React.FC<ContactProps> = ({
         </IconButton>
       </Link>
       {showText && (
-        <ContactLink
-          sx={{ display: { md: "flex", xs: "none" }, alignSelf: "center" }}
-          href={link}
-        >
+        <ContactLink sx={{ alignSelf: "center" }} href={link}>
           {text}
         </ContactLink>
       )}
