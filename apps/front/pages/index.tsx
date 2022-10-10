@@ -31,12 +31,8 @@ const Home: NextPage = () => {
               </Box>
             </Card>
           </Container>
-          <Box sx={{ section: { mt: 6 } }}>
-            <Technologies />
-          </Box>
-          <Box sx={{ section: { mt: 6 } }}>
-            <Projects />
-          </Box>
+          <Technologies />
+          <Projects />
         </Container>
       </BackgroundImageBox>
     </BackgroundImageBox>

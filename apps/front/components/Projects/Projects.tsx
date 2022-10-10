@@ -15,7 +15,15 @@ const Projects = () => {
     },
   ];
   return (
-    <Container maxWidth="lg" component="section">
+    <Container
+      maxWidth="lg"
+      component="section"
+      sx={{
+        ".MuiCard-root": {
+          mb: 4,
+        },
+      }}
+    >
       <Section title="Projects">
         {projects.map(({ slug, ...rest }) => (
           <Project key={slug} {...rest} />

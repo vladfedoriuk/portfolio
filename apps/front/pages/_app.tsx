@@ -1,4 +1,5 @@
 import AppBar from "@components/AppBar";
+import Footer from "@components/Footer";
 import { CacheProvider } from "@emotion/react";
 import CssBaseline from "@mui/material/CssBaseline";
 import { ThemeProvider } from "@mui/material/styles";
@@ -7,6 +8,11 @@ import Head from "next/head";
 import { theme } from "theme";
 // Client-side cache, shared for the whole session of the user in the browser.
 const clientSideEmotionCache = createEmotionCache();
+
+const footerItems: {
+  title: string;
+  items: { link: string; title: string }[];
+}[] = [];
 
 function MyApp({
   Component,
@@ -24,6 +30,7 @@ function MyApp({
         <CssBaseline />
         <AppBar />
         <Component {...pageProps} />
+        <Footer footers={footerItems} />
       </ThemeProvider>
     </CacheProvider>
   );
