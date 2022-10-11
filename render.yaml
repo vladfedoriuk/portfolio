@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: app-front
+    branch: main
+    env: static
+    buildCommand: cd apps/front; yarn; yarn build; yarn next export
+    staticPublishPath: ./apps/front/out
+    buildFilter:
+      paths:
+        - apps/front/**?
