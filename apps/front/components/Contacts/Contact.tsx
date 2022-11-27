@@ -18,20 +18,20 @@ export const Contact: React.FC<ContactProps> = ({
 }) => {
   const spacingFromVariant = {
     short: 0,
-    full: 0.5,
+    full: 0.125,
   } as const;
 
   const showText = variant !== "short";
 
   return (
-    <Stack direction="row" spacing={spacingFromVariant[variant]} maxWidth="sm">
+    <Stack direction="row" spacing={spacingFromVariant[variant]} maxWidth="lg">
       <Link href={link}>
         <IconButton aria-label={text} sx={{ color: "text.primary" }}>
           {icon}
         </IconButton>
       </Link>
       {showText && (
-        <ContactLink sx={{ alignSelf: "center" }} href={link}>
+        <ContactLink sx={{ alignSelf: "center", fontSize: 14 }} href={link}>
           {text}
         </ContactLink>
       )}

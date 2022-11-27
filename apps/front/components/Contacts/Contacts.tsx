@@ -27,7 +27,7 @@ const Contacts = ({ variant = "short" }: { variant?: "short" | "full" }) => {
 
   const spacingFromVariant = {
     short: 0.25,
-    full: 2,
+    full: 0,
   } as const;
 
   return (

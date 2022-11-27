@@ -1,3 +1,4 @@
+// https://github.com/lydell/eslint-plugin-simple-import-sort
 module.exports = {
   extends: ["next", "plugin:@typescript-eslint/recommended", "prettier"],
   plugins: ["@typescript-eslint", "simple-import-sort", "import"],

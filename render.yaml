@@ -7,4 +7,4 @@ services:
     staticPublishPath: ./apps/front/out
     buildFilter:
       paths:
-        - apps/front/**?
+        - apps/front/**
