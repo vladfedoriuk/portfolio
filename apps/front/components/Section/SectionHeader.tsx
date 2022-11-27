@@ -9,7 +9,7 @@ const SectionHeader = ({ text }: { text: string }) => {
       sx={{
         textTransform: "uppercase",
         lineHeight: 1,
-        letterSpacing: ".075rem",
+        letterSpacing: ".055rem",
       }}
     >
       {text}

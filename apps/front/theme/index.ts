@@ -38,7 +38,7 @@ export const theme = responsiveFontSizes(
             props: { variant: "button-spaced" },
             style: {
               ...baseTheme.typography.button,
-              letterSpacing: ".1rem",
+              letterSpacing: ".055rem",
             },
           },
         ],
