@@ -1,6 +1,5 @@
 // https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
 // https://storybook.js.org/addons/storybook-addon-next
-// https://www.npmjs.com/package/storybook-addon-material-ui5
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
@@ -13,11 +12,13 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "storybook-addon-next",
-    "storybook-addon-material-ui5",
   ],
   framework: "@storybook/react",
   core: {
     builder: "@storybook/builder-webpack5",
+  },
+  features: {
+    emotionAlias: false,
   },
   webpackFinal: async (config) => {
     const imageRule = config.module.rules.find((rule) =>

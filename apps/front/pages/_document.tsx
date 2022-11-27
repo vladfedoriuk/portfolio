@@ -1,16 +1,11 @@
-import { EmotionCache } from "@emotion/cache";
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import createEmotionServer from "@emotion/server/create-instance";
 import { theme } from "@theme/index";
 import createEmotionCache from "@utils/cache/createEmotionCache";
-import { AppInitialProps } from "next/app";
-import { AppContextType, AppPropsType } from "next/dist/shared/lib/utils";
 import Document, { Head, Html, Main, NextScript } from "next/document";
-import { NextComponentType } from "next/types";
 import * as React from "react";
 
-export default class MyDocument extends Document<{
-  emotionStyleTags: JSX.Element[];
-}> {
+export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
@@ -18,12 +13,8 @@ export default class MyDocument extends Document<{
           {/* PWA primary color */}
           <meta name="theme-color" content={theme.palette.primary.main} />
           <link rel="shortcut icon" href="/favicon.ico" />
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-          />
           <meta name="emotion-insertion-point" content="" />
-          {this.props.emotionStyleTags}
+          {(this.props as any).emotionStyleTags}
         </Head>
         <body>
           <Main />
@@ -68,13 +59,7 @@ MyDocument.getInitialProps = async (ctx) => {
 
   ctx.renderPage = () =>
     originalRenderPage({
-      enhanceApp: (
-        App: NextComponentType<
-          AppContextType,
-          AppInitialProps,
-          AppPropsType & { emotionCache?: EmotionCache }
-        >
-      ) =>
+      enhanceApp: (App: any) =>
         function EnhanceApp(props) {
           return <App emotionCache={cache} {...props} />;
         },

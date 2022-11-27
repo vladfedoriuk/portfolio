@@ -6,15 +6,13 @@ import { useRouter } from "next/router";
 import * as React from "react";
 
 // Add support for the sx prop for consistency with the other branches.
-// https://tobiasahlin.com/blog/css-trick-animating-link-underlines/
-
 const Anchor = styled("a")({});
 
 interface NextLinkComposedProps
   extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
     Omit<
       NextLinkProps,
-      "href" | "as" | "onClick" | "onMouseEnter" | "onTouchStart"
+      "href" | "as" | "passHref" | "onMouseEnter" | "onClick" | "onTouchStart"
     > {
   to: NextLinkProps["href"];
   linkAs?: NextLinkProps["as"];
@@ -24,8 +22,17 @@ export const NextLinkComposed = React.forwardRef<
   HTMLAnchorElement,
   NextLinkComposedProps
 >(function NextLinkComposed(props, ref) {
-  const { to, linkAs, replace, scroll, shallow, prefetch, locale, ...other } =
-    props;
+  const {
+    to,
+    linkAs,
+    replace,
+    scroll,
+    shallow,
+    prefetch,
+    legacyBehavior = true,
+    locale,
+    ...other
+  } = props;
 
   return (
     <NextLink
@@ -37,9 +44,10 @@ export const NextLinkComposed = React.forwardRef<
       shallow={shallow}
       passHref
       locale={locale}
-      ref={ref}
-      {...other}
-    />
+      legacyBehavior={legacyBehavior}
+    >
+      <Anchor ref={ref} {...other} />
+    </NextLink>
   );
 });
 
@@ -63,12 +71,14 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     as,
     className: classNameProps,
     href,
+    legacyBehavior,
     linkAs: linkAsProp,
     locale,
     noLinkStyle,
     prefetch,
     replace,
-    role, // Links don't have roles.
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    role, // Link don't have roles.
     scroll,
     shallow,
     ...other
@@ -86,26 +96,10 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
 
   if (isExternal) {
     if (noLinkStyle) {
-      return (
-        <Anchor
-          className={className}
-          href={href}
-          ref={ref}
-          role={role}
-          {...other}
-        />
-      );
+      return <Anchor className={className} href={href} ref={ref} {...other} />;
     }
 
-    return (
-      <MuiLink
-        className={className}
-        href={href}
-        ref={ref}
-        role={role}
-        {...other}
-      />
-    );
+    return <MuiLink className={className} href={href} ref={ref} {...other} />;
   }
 
   const linkAs = linkAsProp || as;
@@ -116,8 +110,8 @@ const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(function Link(
     scroll,
     shallow,
     prefetch,
+    legacyBehavior,
     locale,
-    role,
   };
 
   if (noLinkStyle) {

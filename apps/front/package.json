@@ -8,7 +8,11 @@
     "start": "next start",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "update-all": "yarn upgrade --latest"
+  },
+  "resolutions": {
+    "**/@emotion/styled": "^11.10.5"
   },
   "dependencies": {
     "@emotion/cache": "^11.10.5",
@@ -21,8 +25,7 @@
     "framer-motion": "^7.6.12",
     "next": "13.0.5",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "storybook-addon-material-ui5": "^1.0.0"
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
