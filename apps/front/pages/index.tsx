@@ -1,3 +1,4 @@
+import About from "@components/About";
 import { BackgroundImageBox } from "@components/BackgroundImage/styled";
 import Contacts from "@components/Contacts";
 import Heading from "@components/Heading";
@@ -8,6 +9,15 @@ import Box from "@mui/system/Box";
 import Container from "@mui/system/Container";
 import type { NextPage } from "next";
 
+const aboutTexts = [
+  "I am a passionate software developer.",
+  "My fields of interest range",
+  "from Web Development,",
+  "Mobile Development,",
+  "to Machine Learning...",
+  "Also, I am thrilled about the modern front-end world.",
+  "Mostly React, React Native and Vue.",
+];
 const Home: NextPage = () => {
   return (
     <BackgroundImageBox imagePath="/wave-right.svg">
@@ -32,6 +42,7 @@ const Home: NextPage = () => {
             </Card>
           </Container>
           <Technologies />
+          <About texts={aboutTexts} />
           <Projects />
         </Container>
       </BackgroundImageBox>
