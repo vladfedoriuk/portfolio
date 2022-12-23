@@ -1,5 +1,5 @@
 // https://storybook.js.org/blog/get-started-with-storybook-and-next-js/
-// https://storybook.js.org/addons/storybook-addon-next
+// https://storybook.js.org/blog/integrate-nextjs-and-storybook-automatically/
 module.exports = {
   stories: [
     "../stories/**/*.stories.mdx",
@@ -11,11 +11,10 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "storybook-addon-next",
   ],
-  framework: "@storybook/react",
-  core: {
-    builder: "@storybook/builder-webpack5",
+  framework: {
+    name: "@storybook/nextjs",
+    options: {},
   },
   features: {
     emotionAlias: false,
@@ -25,12 +24,13 @@ module.exports = {
       rule.test.test(".svg")
     );
     imageRule.exclude = /\.svg$/;
-
     config.module.rules.push({
       test: /\.svg$/,
       use: ["@svgr/webpack"],
     });
-
     return config;
+  },
+  docs: {
+    docsPage: "automatic",
   },
 };

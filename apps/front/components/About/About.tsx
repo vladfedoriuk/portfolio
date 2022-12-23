@@ -5,7 +5,12 @@ import Typewriter from "typewriter-effect";
 
 const About = ({ texts }: { texts: string[] }) => {
   return (
-    <Container maxWidth="xs" component="section" sx={{ minHeight: "9em" }}>
+    <Container
+      maxWidth="xs"
+      component="section"
+      sx={{ minHeight: "9em" }}
+      disableGutters
+    >
       <Section title="About me">
         <Box
           sx={{
@@ -14,7 +19,7 @@ const About = ({ texts }: { texts: string[] }) => {
               fontWeight: 500,
               lineHeight: 1.5,
               letterSpacing: "0.1em",
-              fontFamily: "Roboto, Helvetica, Arial, sans-serif",
+              fontFamily: " -apple-system, BlinkMacSystemFont, sans-serif;",
               lineBreak: "word",
               color: theme.palette.text.secondary,
             }),

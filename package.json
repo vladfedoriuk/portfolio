@@ -15,7 +15,8 @@
     "front:storybook": "yarn workspace front storybook",
     "front:build": "yarn workspace front build",
     "front:export": "yarn workspace front next export",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "update-all": "yarn upgrade-interactive --latest "
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^5.44.0",
