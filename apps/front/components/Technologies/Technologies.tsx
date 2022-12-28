@@ -42,7 +42,8 @@ const Technologies = () => {
       component={motion.section}
       variants={container}
       initial="hidden"
-      animate="show"
+      whileInView="show"
+      viewport={{ once: true }}
       sx={{
         ".MuiSvgIcon-root": {
           m: 2,
@@ -50,28 +51,28 @@ const Technologies = () => {
       }}
     >
       <Section title="Tech Stack">
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={PythonSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={TypescriptSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={DjangoSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={FastAPISvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={ReactSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={VueSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={NextJsSvg} inheritViewBox />
         </Box>
-        <Box component={motion.div} variants={item} whileHover={{ y: -10 }}>
+        <Box component={motion.div} variants={item} whileHover={{ y: -15 }}>
           <SvgIcon fontSize="large" component={NuxtSvg} inheritViewBox />
         </Box>
       </Section>
