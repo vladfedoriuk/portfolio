@@ -7,8 +7,7 @@
   "author": "vladfedoriuk <vlad.fedoriuk2000@gmail.com>",
   "license": "MIT",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "apps/*"
   ],
   "scripts": {
     "front:dev": "yarn workspace front dev",

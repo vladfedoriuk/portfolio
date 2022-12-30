@@ -1,19 +1,19 @@
-import React from "react";
+import Box from "@mui/system/Box";
 
 import SectionContent from "./SectionContent";
 import SectionHeader from "./SectionHeader";
-import SectionWrapper from "./SectionWrapper";
 
 interface SectionProps {
   title: string;
+  height?: string;
   children: React.ReactNode;
 }
-const Section = ({ title, children }: SectionProps) => {
+const Section = ({ title, height = "50vh", children }: SectionProps) => {
   return (
-    <SectionWrapper>
+    <Box sx={{ mt: 2, height }}>
       <SectionHeader text={title} />
       <SectionContent>{children}</SectionContent>
-    </SectionWrapper>
+    </Box>
   );
 };
 
