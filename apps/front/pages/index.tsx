@@ -7,6 +7,7 @@ import Technologies from "@components/Technologies";
 import Card from "@mui/material/Card";
 import Box from "@mui/system/Box";
 import Container from "@mui/system/Container";
+import { motion } from "framer-motion";
 import type { NextPage } from "next";
 import Image from "next/image";
 
@@ -18,6 +19,32 @@ const aboutTexts = [
   "to Machine Learning...",
   "Moreover, I am thrilled about the modern front-end world.",
 ];
+
+const imageAnimation = {
+  hidden: { opacity: 0, x: 100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      x: { type: "spring", stiffness: 100 },
+      duration: 1,
+      delay: 1,
+    },
+  },
+};
+
+const headerAnimation = {
+  hidden: { opacity: 0, x: -100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      x: { type: "spring", stiffness: 100 },
+      duration: 0.5,
+    },
+  },
+};
+
 const Home: NextPage = () => {
   return (
     <BackgroundImageBox imagePath="/wave-right.svg">
@@ -35,6 +62,11 @@ const Home: NextPage = () => {
               sx={{ pt: 4, display: "flex", flexDirection: "row" }}
             >
               <Card
+                component={motion.div}
+                variants={headerAnimation}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
                 elevation={1}
                 sx={{
                   p: 3,
@@ -50,6 +82,11 @@ const Home: NextPage = () => {
                 </Box>
               </Card>
               <Box
+                component={motion.div}
+                variants={imageAnimation}
+                initial="hidden"
+                whileInView="show"
+                viewport={{ once: true }}
                 sx={(theme) => ({
                   position: "relative",
                   left: 300,
