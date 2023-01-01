@@ -52,7 +52,7 @@ const Home: NextPage = () => {
         <Container maxWidth="xl" component="main">
           <Box
             sx={(theme) => ({
-              [theme.breakpoints.up("sm")]: { height: "50vh" },
+              [theme.breakpoints.up("sm")]: { mb: 8 },
               [theme.breakpoints.down("sm")]: { mb: 4 },
             })}
           >

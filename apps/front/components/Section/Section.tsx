@@ -5,12 +5,11 @@ import SectionHeader from "./SectionHeader";
 
 interface SectionProps {
   title: string;
-  height?: string;
   children: React.ReactNode;
 }
-const Section = ({ title, height = "50vh", children }: SectionProps) => {
+const Section = ({ title, children }: SectionProps) => {
   return (
-    <Box sx={{ mt: 2, height }}>
+    <Box sx={{ mt: 4 }}>
       <SectionHeader text={title} />
       <SectionContent>{children}</SectionContent>
     </Box>
