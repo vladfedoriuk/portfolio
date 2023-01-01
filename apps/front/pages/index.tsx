@@ -20,7 +20,7 @@ const aboutTexts = [
   "Moreover, I am thrilled about the modern front-end world.",
 ];
 
-const imageAnimation = {
+const image1Animation = {
   hidden: { opacity: 0, x: 100 },
   show: {
     opacity: 1,
@@ -29,6 +29,19 @@ const imageAnimation = {
       x: { type: "spring", stiffness: 100 },
       duration: 1,
       delay: 1,
+    },
+  },
+};
+
+const image2Animation = {
+  hidden: { opacity: 0, x: -100 },
+  show: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      x: { type: "spring", stiffness: 100 },
+      duration: 1,
+      delay: 1.5,
     },
   },
 };
@@ -83,7 +96,7 @@ const Home: NextPage = () => {
               </Card>
               <Box
                 component={motion.div}
-                variants={imageAnimation}
+                variants={image1Animation}
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
@@ -127,8 +140,53 @@ const Home: NextPage = () => {
               </Box>
             </Container>
           </Box>
+          <Box sx={{ mt: 16, display: "flex", flexDirection: "row" }}>
+            <Box
+              component={motion.div}
+              variants={image2Animation}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              sx={(theme) => ({
+                position: "relative",
+                width: 300,
+                height: 300,
+                left: 175,
+                top: -150,
+                [theme.breakpoints.down("sm")]: {
+                  display: "none",
+                },
+                [theme.breakpoints.down("md")]: {
+                  left: -10,
+                  top: -100,
+                  width: 200,
+                  height: 200,
+                },
+                [theme.breakpoints.down("lg") && theme.breakpoints.up("md")]: {
+                  left: 10,
+                  top: -100,
+                  width: 200,
+                  height: 200,
+                },
+                [theme.breakpoints.up("lg")]: {
+                  left: 50,
+                  top: -100,
+                  width: 350,
+                  height: 350,
+                },
+                [theme.breakpoints.up("xl")]: {
+                  left: 100,
+                  top: -150,
+                  width: 300,
+                  height: 300,
+                },
+              })}
+            >
+              <Image src="/app-coding.svg" alt="Coding" fill />
+            </Box>
+            <About texts={aboutTexts} />
+          </Box>
           <Technologies />
-          <About texts={aboutTexts} />
           <Projects />
         </Container>
       </BackgroundImageBox>
