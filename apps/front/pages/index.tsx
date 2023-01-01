@@ -140,7 +140,16 @@ const Home: NextPage = () => {
               </Box>
             </Container>
           </Box>
-          <Box sx={{ mt: 16, display: "flex", flexDirection: "row" }}>
+          <Box
+            sx={{
+              mt: {
+                sm: 8,
+                md: 16,
+              },
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
             <Box
               component={motion.div}
               variants={image2Animation}

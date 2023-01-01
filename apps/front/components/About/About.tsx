@@ -35,7 +35,7 @@ const About = ({ texts }: { texts: string[] }) => {
           sx={{
             p: 1.5,
             minWidth: (theme) => ({
-              xs: theme.spacing(47),
+              xs: theme.spacing(45),
               sm: theme.spacing(57),
               md: theme.spacing(67),
               lg: theme.spacing(77),
