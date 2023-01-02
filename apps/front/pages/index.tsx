@@ -158,34 +158,30 @@ const Home: NextPage = () => {
               viewport={{ once: true }}
               sx={(theme) => ({
                 position: "relative",
-                width: 300,
-                height: 300,
-                left: 175,
-                top: -150,
                 [theme.breakpoints.down("sm")]: {
                   display: "none",
                 },
                 [theme.breakpoints.down("md")]: {
                   left: -10,
-                  top: -100,
+                  top: -50,
                   width: 200,
                   height: 200,
                 },
-                [theme.breakpoints.down("lg") && theme.breakpoints.up("md")]: {
+                [theme.breakpoints.down("lg")]: {
                   left: 10,
-                  top: -100,
+                  top: -80,
                   width: 200,
                   height: 200,
                 },
-                [theme.breakpoints.up("lg")]: {
-                  left: 50,
+                [theme.breakpoints.down("xl")]: {
+                  left: 30,
                   top: -100,
-                  width: 350,
-                  height: 350,
+                  width: 300,
+                  height: 300,
                 },
                 [theme.breakpoints.up("xl")]: {
-                  left: 100,
-                  top: -150,
+                  left: 50,
+                  top: -100,
                   width: 300,
                   height: 300,
                 },
