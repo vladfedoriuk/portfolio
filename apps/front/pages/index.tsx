@@ -102,37 +102,32 @@ const Home: NextPage = () => {
                 viewport={{ once: true }}
                 sx={(theme) => ({
                   position: "relative",
-                  left: 300,
-                  top: 100,
-                  width: 300,
-                  height: 300,
                   [theme.breakpoints.down("sm")]: {
                     display: "none",
                   },
-                  [theme.breakpoints.down("md")]: {
+                  [theme.breakpoints.between("sm", "md")]: {
                     left: 15,
                     top: 150,
                     width: 200,
                     height: 200,
                   },
-                  [theme.breakpoints.down("lg") && theme.breakpoints.up("md")]:
-                    {
-                      left: 100,
-                      top: 150,
-                      width: 200,
-                      height: 200,
-                    },
-                  [theme.breakpoints.up("lg")]: {
+                  [theme.breakpoints.between("md", "lg")]: {
+                    left: 55,
+                    top: 150,
+                    width: 200,
+                    height: 200,
+                  },
+                  [theme.breakpoints.between("lg", "xl")]: {
                     left: 250,
                     top: 100,
-                    width: 300,
-                    height: 300,
+                    width: 250,
+                    height: 250,
                   },
                   [theme.breakpoints.up("xl")]: {
                     left: 350,
                     top: 100,
-                    width: 350,
-                    height: 350,
+                    width: 250,
+                    height: 250,
                   },
                 })}
               >
@@ -174,16 +169,16 @@ const Home: NextPage = () => {
                   height: 200,
                 },
                 [theme.breakpoints.between("lg", "xl")]: {
-                  left: -20,
-                  top: -100,
-                  width: 300,
-                  height: 300,
+                  left: 30,
+                  top: -70,
+                  width: 250,
+                  height: 250,
                 },
                 [theme.breakpoints.up("xl")]: {
                   left: 50,
-                  top: -100,
-                  width: 350,
-                  height: 350,
+                  top: -70,
+                  width: 250,
+                  height: 250,
                 },
               })}
             >
