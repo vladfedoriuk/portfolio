@@ -161,20 +161,20 @@ const Home: NextPage = () => {
                 [theme.breakpoints.down("sm")]: {
                   display: "none",
                 },
-                [theme.breakpoints.down("md")]: {
-                  left: -10,
+                [theme.breakpoints.between("sm", "md")]: {
+                  left: -20,
                   top: -50,
                   width: 200,
                   height: 200,
                 },
-                [theme.breakpoints.down("lg")]: {
-                  left: 10,
+                [theme.breakpoints.between("md", "lg")]: {
+                  left: 50,
                   top: -80,
                   width: 200,
                   height: 200,
                 },
-                [theme.breakpoints.down("xl")]: {
-                  left: 30,
+                [theme.breakpoints.between("lg", "xl")]: {
+                  left: -20,
                   top: -100,
                   width: 300,
                   height: 300,
@@ -182,8 +182,8 @@ const Home: NextPage = () => {
                 [theme.breakpoints.up("xl")]: {
                   left: 50,
                   top: -100,
-                  width: 300,
-                  height: 300,
+                  width: 350,
+                  height: 350,
                 },
               })}
             >
